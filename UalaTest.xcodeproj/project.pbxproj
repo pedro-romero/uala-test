@@ -13,6 +13,8 @@
 		89C91A4525BCD86000C545F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C91A4425BCD86000C545F5 /* Assets.xcassets */; };
 		89C91A4825BCD86000C545F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C91A4625BCD86000C545F5 /* LaunchScreen.storyboard */; };
 		89C91A5325BCD86000C545F5 /* UalaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C91A5225BCD86000C545F5 /* UalaTestTests.swift */; };
+		89C91A5E25BCDA4D00C545F5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C91A5D25BCDA4D00C545F5 /* Coordinator.swift */; };
+		89C91A6025BCDA6D00C545F5 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C91A5F25BCDA6D00C545F5 /* AppCoordinator.swift */; };
 		C421B3A3DEBF735EF13AD2F3 /* Pods_UalaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		89C91A4E25BCD86000C545F5 /* UalaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UalaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C91A5225BCD86000C545F5 /* UalaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UalaTestTests.swift; sourceTree = "<group>"; };
 		89C91A5425BCD86000C545F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89C91A5D25BCDA4D00C545F5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		89C91A5F25BCDA6D00C545F5 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B6B77838272F728B6669538D /* Pods_UalaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +105,8 @@
 				89C91A4425BCD86000C545F5 /* Assets.xcassets */,
 				89C91A4625BCD86000C545F5 /* LaunchScreen.storyboard */,
 				89C91A4925BCD86000C545F5 /* Info.plist */,
+				89C91A5D25BCDA4D00C545F5 /* Coordinator.swift */,
+				89C91A5F25BCDA6D00C545F5 /* AppCoordinator.swift */,
 			);
 			path = UalaTest;
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C91A6025BCDA6D00C545F5 /* AppCoordinator.swift in Sources */,
 				89C91A3C25BCD85F00C545F5 /* AppDelegate.swift in Sources */,
 				89C91A3E25BCD85F00C545F5 /* SceneDelegate.swift in Sources */,
+				89C91A5E25BCDA4D00C545F5 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

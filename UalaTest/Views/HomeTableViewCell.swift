@@ -25,4 +25,9 @@ class HomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configure(with meal: Meal) {
+        nameLabel.text = meal.strMeal
+        categoryLabel.text = meal.strCategory
+    }
 }

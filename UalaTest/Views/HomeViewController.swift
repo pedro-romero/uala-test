@@ -12,21 +12,38 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var viewModel: HomeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.itemsCount()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+        guard let viewModel = viewModel else { return cell }
+        let meal = viewModel.item(at: indexPath.row)
+        cell.configure(with: meal)
+        return cell
     }
-    */
+}
 
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    
 }

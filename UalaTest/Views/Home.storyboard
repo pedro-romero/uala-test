@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="QUt-h4-NoQ">
             <objects>
-                <viewController id="Ytf-j0-4yz" customClass="HomeViewController" customModule="UalaTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Ytf-j0-4yz" customClass="HomeViewController" customModule="UalaTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7nk-9v-wEj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umL-2u-XxB">
                                 <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="99" id="fkc-aV-p8c" customClass="HomeTableViewCell" customModule="UalaTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="99"/>
@@ -33,6 +34,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PEw-kk-7Yc">
                                                     <rect key="frame" x="16" y="6" width="87" height="87"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="elK-uD-j1K"/>
                                                         <constraint firstAttribute="width" secondItem="PEw-kk-7Yc" secondAttribute="height" multiplier="1:1" id="kla-m4-sUH"/>
                                                     </constraints>
                                                 </imageView>
@@ -71,12 +73,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Q4F-Kg-Daf">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="VgE-0v-DKC" firstAttribute="trailing" secondItem="AAl-ZP-S43" secondAttribute="trailing" id="9oW-Lk-vQc"/>
                             <constraint firstItem="AAl-ZP-S43" firstAttribute="bottom" secondItem="umL-2u-XxB" secondAttribute="bottom" id="DnN-ea-SwR"/>
+                            <constraint firstItem="Q4F-Kg-Daf" firstAttribute="centerX" secondItem="7nk-9v-wEj" secondAttribute="centerX" id="JYV-gD-45Z"/>
                             <constraint firstItem="umL-2u-XxB" firstAttribute="trailing" secondItem="AAl-ZP-S43" secondAttribute="trailing" id="OM9-PQ-1R7"/>
+                            <constraint firstItem="Q4F-Kg-Daf" firstAttribute="centerY" secondItem="7nk-9v-wEj" secondAttribute="centerY" id="jM7-PS-fYh"/>
                             <constraint firstItem="umL-2u-XxB" firstAttribute="top" secondItem="VgE-0v-DKC" secondAttribute="bottom" id="oTT-sf-Keh"/>
                             <constraint firstItem="VgE-0v-DKC" firstAttribute="leading" secondItem="AAl-ZP-S43" secondAttribute="leading" id="uHO-uB-lSP"/>
                             <constraint firstItem="VgE-0v-DKC" firstAttribute="top" secondItem="AAl-ZP-S43" secondAttribute="top" id="wu2-B2-e2r"/>
@@ -85,6 +93,7 @@
                         <viewLayoutGuide key="safeArea" id="AAl-ZP-S43"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Q4F-Kg-Daf" id="Fpw-Tr-qzC"/>
                         <outlet property="searchBar" destination="VgE-0v-DKC" id="Z1Z-iP-Tcg"/>
                         <outlet property="tableView" destination="umL-2u-XxB" id="CtE-NV-x0N"/>
                     </connections>

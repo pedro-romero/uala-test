@@ -63,5 +63,5 @@ struct Meal: Decodable {
 }
 
 struct MealsResponse: Decodable {
-    let meals: [Meal]
+    let meals: [Meal]?
 }

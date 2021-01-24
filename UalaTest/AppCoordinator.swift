@@ -11,7 +11,7 @@ import UIKit
 class AppCoordinator: Coordinator {
     // MARK: - Properties
     let window: UIWindow?
-    var rootViewController = UINavigationController(rootViewController: UIViewController())
+    var rootViewController = UINavigationController()
 
     // MARK: - Coordinator
     init(window: UIWindow?) {
@@ -20,6 +20,9 @@ class AppCoordinator: Coordinator {
 
     override func start() {
         guard let window = window else { return }
+        let homeCoordinator = HomeCoordinator(navigationController: rootViewController)
+        addChildCoordinator(homeCoordinator)
+        homeCoordinator.start()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }

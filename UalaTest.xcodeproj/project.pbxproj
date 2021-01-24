@@ -22,6 +22,7 @@
 		89E0B59B25BCF472002B583A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59A25BCF472002B583A /* HomeViewController.swift */; };
 		89E0B59D25BCF485002B583A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59C25BCF485002B583A /* HomeTableViewCell.swift */; };
 		89E0B5A025BCF614002B583A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59F25BCF614002B583A /* HomeViewModel.swift */; };
+		89E0B5A225BCFA47002B583A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B5A125BCFA47002B583A /* HomeCoordinator.swift */; };
 		C421B3A3DEBF735EF13AD2F3 /* Pods_UalaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		89E0B59A25BCF472002B583A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89E0B59C25BCF485002B583A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		89E0B59F25BCF614002B583A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		89E0B5A125BCFA47002B583A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B6B77838272F728B6669538D /* Pods_UalaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				89C91A4925BCD86000C545F5 /* Info.plist */,
 				89C91A5D25BCDA4D00C545F5 /* Coordinator.swift */,
 				89C91A5F25BCDA6D00C545F5 /* AppCoordinator.swift */,
+				89E0B5A125BCFA47002B583A /* HomeCoordinator.swift */,
 			);
 			path = UalaTest;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				89E0B59D25BCF485002B583A /* HomeTableViewCell.swift in Sources */,
 				89C91A6325BCDC0C00C545F5 /* MealService.swift in Sources */,
 				89C91A5E25BCDA4D00C545F5 /* Coordinator.swift in Sources */,
+				89E0B5A225BCFA47002B583A /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,7 +58,7 @@ class MealServices {
         MealServiceRouter.search(searchText: searchText).fetchDecodable { (response: (Result<MealsResponse, Error>)) in
             switch response {
             case let .success(mealResponse):
-                completion(.success(mealResponse.meals))
+                completion(.success(mealResponse.meals ?? []))
             case let .failure(error):
                 completion(.failure(error))
             }

@@ -7,6 +7,7 @@ target 'UalaTest' do
 
   # Pods for UalaTest
 pod 'Alamofire', '~> 5.2'
+pod 'Kingfisher', '~> 5.0'
 
   target 'UalaTestTests' do
     inherit! :search_paths

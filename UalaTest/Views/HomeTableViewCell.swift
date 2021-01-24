@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -26,8 +27,17 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        thumbnailImageView.image = nil
+        nameLabel.text = ""
+        categoryLabel.text = ""
+    }
+    
     func configure(with meal: Meal) {
         nameLabel.text = meal.strMeal
         categoryLabel.text = meal.strCategory
+        if let thumbUrl = URL(string: meal.strMealThumb) {
+            thumbnailImageView.kf.setImage(with: thumbUrl)
+        }
     }
 }

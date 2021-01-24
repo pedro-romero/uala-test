@@ -36,3 +36,19 @@ class HomeCoordinator: Coordinator {
     
     override func finish() {}
 }
+
+extension HomeCoordinator {
+    func goToMealDetail(_ mealId: String) {
+        guard let mealViewController = storyboard.instantiateViewController(identifier: "MealViewController") as? MealViewController else { return }
+        let mealService = MealServices()
+        let viewModel = MealViewModel(mealService: mealService)
+        mealViewController.viewModel = viewModel
+        mealViewController.coordinator = self
+        mealViewController.mealId = mealId
+        navigationController.pushViewController(mealViewController, animated: true)
+    }
+    
+    func popController() {
+        navigationController.popViewController(animated: true)
+    }
+}

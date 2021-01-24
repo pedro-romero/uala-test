@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Buscador"
+        navigationItem.title = "Meal Search"
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -71,7 +71,11 @@ extension HomeViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        let meal = viewModel.item(at: indexPath.row)
+        coordinator?.goToMealDetail(meal.idMeal)
+    }
 }
 
 // MARK: - UISearchBarDelegate

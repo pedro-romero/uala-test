@@ -21,9 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appCoordinator = AppCoordinator(window: window)
         appCoordinator.start()
-        MealServices().byId("52767") { (result) in
-            print(result)
-        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

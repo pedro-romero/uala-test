@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="QUt-h4-NoQ">
+            <objects>
+                <viewController id="Ytf-j0-4yz" customClass="HomeViewController" customModule="UalaTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7nk-9v-wEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VgE-0v-DKC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umL-2u-XxB">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="99" id="fkc-aV-p8c" customClass="HomeTableViewCell" customModule="UalaTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="99"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fkc-aV-p8c" id="Bcc-gh-tX4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PEw-kk-7Yc">
+                                                    <rect key="frame" x="16" y="6" width="87" height="87"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PEw-kk-7Yc" secondAttribute="height" multiplier="1:1" id="kla-m4-sUH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7fZ-Y2-Ju7">
+                                                    <rect key="frame" x="111" y="25" width="287" height="49"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2K-t3-V7c">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QW-HG-qZT">
+                                                            <rect key="frame" x="0.0" y="28.5" width="287" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="PEw-kk-7Yc" secondAttribute="bottom" constant="6" id="3pv-VU-oaa"/>
+                                                <constraint firstAttribute="trailing" secondItem="7fZ-Y2-Ju7" secondAttribute="trailing" constant="16" id="6Dq-kK-fJk"/>
+                                                <constraint firstItem="7fZ-Y2-Ju7" firstAttribute="leading" secondItem="PEw-kk-7Yc" secondAttribute="trailing" constant="8" id="6rM-aG-70w"/>
+                                                <constraint firstItem="PEw-kk-7Yc" firstAttribute="leading" secondItem="Bcc-gh-tX4" secondAttribute="leading" constant="16" id="8s3-6t-vtY"/>
+                                                <constraint firstItem="PEw-kk-7Yc" firstAttribute="top" secondItem="Bcc-gh-tX4" secondAttribute="top" constant="6" id="igk-Kd-UKV"/>
+                                                <constraint firstItem="7fZ-Y2-Ju7" firstAttribute="centerY" secondItem="PEw-kk-7Yc" secondAttribute="centerY" id="v08-Y6-Ii0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="5QW-HG-qZT" id="8So-Dv-fCR"/>
+                                            <outlet property="nameLabel" destination="A2K-t3-V7c" id="Cnk-LU-Vol"/>
+                                            <outlet property="thumbnailImageView" destination="PEw-kk-7Yc" id="4OJ-WC-1gP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VgE-0v-DKC" firstAttribute="trailing" secondItem="AAl-ZP-S43" secondAttribute="trailing" id="9oW-Lk-vQc"/>
+                            <constraint firstItem="AAl-ZP-S43" firstAttribute="bottom" secondItem="umL-2u-XxB" secondAttribute="bottom" id="DnN-ea-SwR"/>
+                            <constraint firstItem="umL-2u-XxB" firstAttribute="trailing" secondItem="AAl-ZP-S43" secondAttribute="trailing" id="OM9-PQ-1R7"/>
+                            <constraint firstItem="umL-2u-XxB" firstAttribute="top" secondItem="VgE-0v-DKC" secondAttribute="bottom" id="oTT-sf-Keh"/>
+                            <constraint firstItem="VgE-0v-DKC" firstAttribute="leading" secondItem="AAl-ZP-S43" secondAttribute="leading" id="uHO-uB-lSP"/>
+                            <constraint firstItem="VgE-0v-DKC" firstAttribute="top" secondItem="AAl-ZP-S43" secondAttribute="top" id="wu2-B2-e2r"/>
+                            <constraint firstItem="umL-2u-XxB" firstAttribute="leading" secondItem="AAl-ZP-S43" secondAttribute="leading" id="x37-m1-ecT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AAl-ZP-S43"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="VgE-0v-DKC" id="Z1Z-iP-Tcg"/>
+                        <outlet property="tableView" destination="umL-2u-XxB" id="CtE-NV-x0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZb-9Y-7oM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>

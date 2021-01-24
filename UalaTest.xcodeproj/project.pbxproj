@@ -18,6 +18,9 @@
 		89C91A6325BCDC0C00C545F5 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C91A6225BCDC0C00C545F5 /* MealService.swift */; };
 		89C91A6725BCE02400C545F5 /* ServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C91A6625BCE02400C545F5 /* ServiceBase.swift */; };
 		89E0B59625BCEAF9002B583A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59525BCEAF9002B583A /* Meal.swift */; };
+		89E0B59925BCF306002B583A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E0B59825BCF306002B583A /* Home.storyboard */; };
+		89E0B59B25BCF472002B583A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59A25BCF472002B583A /* HomeViewController.swift */; };
+		89E0B59D25BCF485002B583A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0B59C25BCF485002B583A /* HomeTableViewCell.swift */; };
 		C421B3A3DEBF735EF13AD2F3 /* Pods_UalaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		89C91A6225BCDC0C00C545F5 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		89C91A6625BCE02400C545F5 /* ServiceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBase.swift; sourceTree = "<group>"; };
 		89E0B59525BCEAF9002B583A /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		89E0B59825BCF306002B583A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		89E0B59A25BCF472002B583A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		89E0B59C25BCF485002B583A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B6B77838272F728B6669538D /* Pods_UalaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7324DC4BACF28C81F478045 /* Pods_UalaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +112,7 @@
 		89C91A3A25BCD85F00C545F5 /* UalaTest */ = {
 			isa = PBXGroup;
 			children = (
+				89E0B59725BCF2E2002B583A /* Views */,
 				89E0B59425BCEAEB002B583A /* Models */,
 				89C91A6125BCDBA200C545F5 /* Services */,
 				89C91A3B25BCD85F00C545F5 /* AppDelegate.swift */,
@@ -143,6 +150,16 @@
 				89E0B59525BCEAF9002B583A /* Meal.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		89E0B59725BCF2E2002B583A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89E0B59825BCF306002B583A /* Home.storyboard */,
+				89E0B59A25BCF472002B583A /* HomeViewController.swift */,
+				89E0B59C25BCF485002B583A /* HomeTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DC1FE2CAE63F2DBEBA714877 /* Pods */ = {
@@ -240,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E0B59925BCF306002B583A /* Home.storyboard in Resources */,
 				89C91A4825BCD86000C545F5 /* LaunchScreen.storyboard in Resources */,
 				89C91A4525BCD86000C545F5 /* Assets.xcassets in Resources */,
 			);
@@ -326,8 +344,10 @@
 				89C91A6025BCDA6D00C545F5 /* AppCoordinator.swift in Sources */,
 				89C91A6725BCE02400C545F5 /* ServiceBase.swift in Sources */,
 				89E0B59625BCEAF9002B583A /* Meal.swift in Sources */,
+				89E0B59B25BCF472002B583A /* HomeViewController.swift in Sources */,
 				89C91A3C25BCD85F00C545F5 /* AppDelegate.swift in Sources */,
 				89C91A3E25BCD85F00C545F5 /* SceneDelegate.swift in Sources */,
+				89E0B59D25BCF485002B583A /* HomeTableViewCell.swift in Sources */,
 				89C91A6325BCDC0C00C545F5 /* MealService.swift in Sources */,
 				89C91A5E25BCDA4D00C545F5 /* Coordinator.swift in Sources */,
 			);
